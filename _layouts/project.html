@@ -3,10 +3,15 @@
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
     
 <head>
     {% include head.html %}
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("project-summary.html"); 
+    });
+    </script>
 </head>
 <body>
     {% include nav.html %}
@@ -22,10 +27,7 @@
                 </div>
                 <h1>Summary of Projects</h1>
                 
-                <div w3-include-html="project-summary.html"></div> 
-                <script>
-                    w3IncludeHTML();
-                </script>
+                <div id="includedContent"></div>
                 
                 <div class="post-list">
                     {% for post in site.posts %} 
