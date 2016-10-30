@@ -5,13 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
     
 <head>
-    {% include head.html %}
-    <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("project-summary.html"); 
-    });
-    </script>
+    {% include head.html %} 
 </head>
 <body>
     {% include nav.html %}
@@ -27,7 +21,7 @@
                 </div>
                 <h1>Summary of Projects</h1>
                 
-                <div id="includedContent"></div>
+                <script src="b.js"></script>
                 
                 <div class="post-list">
                     {% for post in site.posts %} 
